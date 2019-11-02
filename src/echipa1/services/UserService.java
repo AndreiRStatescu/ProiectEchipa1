@@ -65,6 +65,7 @@ public class UserService {
 		}
 		System.out.println(String.format("Userul %s nu exista", currentUsername));
 	}
+	
 	public boolean checkFriendship(User currentUsername, User newFriendUsername)
 	{
 		for (User user : currentUsername.getFriends())
@@ -73,5 +74,32 @@ public class UserService {
 				return true;
 			}
 		return false;
+	}
+	
+	public void delete_friend(String currentUsername, String deletedFriend)
+	{
+		for (User user: Database.users)
+		{
+			if (user.getUsername().equals(currentUsername))
+			{
+				for (User deletedUser : Database.users)
+				{
+					if(deletedUser.getUsername().equals(deletedFriend))
+					{
+						if(checkFriendship(user, deletedUser)==false)
+						{
+							System.out.println(String.format("Userul %s nu este prieten cu userul %s", currentUsername, deletedFriend));
+							return;
+						}
+						user.getFriends().remove(deletedUser);
+						System.out.println(user.getFriends());
+						return;
+					}
+				}
+				System.out.println(String.format("Userul %s nu exista", deletedFriend));
+				return;
+			}
+		}
+		System.out.println(String.format("Userul %s nu exista", currentUsername));
 	}
 }
