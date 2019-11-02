@@ -1,4 +1,6 @@
-package pack;
+package echipa1;
+import echipa1.services.UserService;
+
 
 public class Main {
 	public static void main(String[] args){

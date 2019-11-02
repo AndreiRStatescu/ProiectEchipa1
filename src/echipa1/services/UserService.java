@@ -1,6 +1,9 @@
-package pack;
+package echipa1.services;
+import echipa1.Database;
+import echipa1.models.User;
 
-import com.sun.media.jfxmedia.events.NewFrameEvent;
+
+
 
 //Service=doar face chestii, nu tine minte atribute, ia dintr-o parte, da in altul
 public class UserService {
