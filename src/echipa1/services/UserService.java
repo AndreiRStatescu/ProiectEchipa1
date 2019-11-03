@@ -111,8 +111,9 @@ public class UserService {
 					return;
 				}
 			}
+			System.out.println("We could not find this event. :(");
 		}
-		System.out.println("We could not find this event. :(");
+		System.out.println("Please register to join the event");
 	}
 
 	private boolean checkEventOrganizer(Events event, String participantname) {
