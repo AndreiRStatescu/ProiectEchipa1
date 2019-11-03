@@ -53,7 +53,7 @@ public class Main {
 		
 		EventService eventService = new EventService();
 		eventService.createJson();
-		
+		eventService.loadJson("events.json");
 	}
 
 }
