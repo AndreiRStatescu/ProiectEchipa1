@@ -6,14 +6,14 @@ import echipa1.models.User;
 
 //Service=doar face chestii, nu tine minte atribute, ia dintr-o parte, da in altul
 public class UserService {
-	public void register(String username, String password) {
+	public void register(String username, String password, String adresaMail, String numarTelefon) {
 		for (User user : Database.users) {
 			if (user.getUsername().equals(username)) {
 				System.out.println("Userul cu numele " + username + " eixsta deja");
 				return;
 			}
 		}
-		Database.users.add(new User(username, password));
+		Database.users.add(new User(username, password, adresaMail, numarTelefon));
 	}
 
 	public void login(String username, String password) {
