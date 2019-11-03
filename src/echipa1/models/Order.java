@@ -24,6 +24,12 @@ public class Order {
 	public void setQuantity(float quantity) {
 		this.quantity = quantity;
 	}
+
+	@Override
+	public String toString() {
+		return "Order [product=" + product + ", quantity=" + quantity + "]";
+	}
+	
 	
 	
 }

@@ -8,7 +8,8 @@ public class User {
 	private String username;
 	private String password;
 	
-	private ArrayList<User> friends= new ArrayList<User>();
+	private ArrayList<User> friends = new ArrayList<User>();
+	private ArrayList<Order> orders = new ArrayList<Order>(); 
 	
 	public User(String username, String password) {
 		super();
@@ -27,13 +28,17 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public ArrayList<User> getFriends() {
+		return friends;
+	}
+	public ArrayList<Order> getOrders() {
+		return orders;
+	}
 	@Override
 	public String toString() {
 		return "User [username=" + username + ", password=" + password + "]";
 	}
-	public ArrayList<User> getFriends() {
-		return friends;
-	}
+	
 	
 	
 }

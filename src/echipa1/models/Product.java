@@ -21,6 +21,11 @@ public class Product {
 	public void setPret(float pret) {
 		this.pret = pret;
 	}
+
+	@Override
+	public String toString() {
+		return "Product [nume=" + nume + ", pret=" + pret + "]";
+	}
 	
 	
 }
