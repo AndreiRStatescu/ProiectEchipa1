@@ -6,14 +6,16 @@ public class Events {
 	private String eventname;
 	private String eventdate;
 	private String eventlocation;
-	private ArrayList<User> organizers = new ArrayList<User>();
+	private String eventorganizer;
+	private ArrayList<User> participants = new ArrayList<User>();
 
-	public Events(String eventname, String eventdate, String eventlocation) {
+	public Events(String eventname, String eventdate, String eventlocation, String organizer) {
 		super();
 		// TODO Auto-generated constructor stub
 		this.eventname = eventname;
 		this.eventdate = eventdate;
 		this.eventlocation = eventlocation;
+		this.eventorganizer = organizer;
 	}
 
 	public String getEventlocation() {
@@ -40,11 +42,19 @@ public class Events {
 		this.eventdate = eventdate;
 	}
 
-	public ArrayList<User> getOrganizers() {
-		return organizers;
+	public String getEventorganizer() {
+		return eventorganizer;
 	}
 
-	public void setOrganizers(ArrayList<User> organizers) {
-		this.organizers = organizers;
+	public void setEventorganizer(String eventorganizer) {
+		this.eventorganizer = eventorganizer;
+	}
+
+	public ArrayList<User> getParticipants() {
+		return participants;
+	}
+
+	public void setParticipants(ArrayList<User> participants) {
+		this.participants = participants;
 	}
 }
