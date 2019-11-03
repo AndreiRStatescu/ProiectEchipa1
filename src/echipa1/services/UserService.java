@@ -94,6 +94,7 @@ public class UserService {
 			Database.events.add(new Events(eventname, eventdate, eventlocation, username));
 			System.out.println(username + " added \"" + eventname + "\" on " + eventdate + " at " + eventlocation);
 		}
+		System.out.println("Please register to create the event");
 	}
 
 	public void joinEvent(String eventname, String eventdate, String eventlocation, String participantname) {
