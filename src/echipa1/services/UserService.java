@@ -9,7 +9,7 @@ public class UserService {
 	public void register(String username, String password, String adresaMail, String numarTelefon) {
 		for (User user : Database.users) {
 			if (user.getUsername().equals(username)) {
-				System.out.println("Userul cu numele " + username + " eixsta deja");
+				System.out.println("Userul cu numele " + username + " exista deja");
 				return;
 			}
 		}
@@ -29,7 +29,16 @@ public class UserService {
 		}
 		System.out.println("Userul " + username + " nu exista");
 	}
-
+	public void show_user (String username) {
+		for (User user : Database.users) {
+			if (user.getUsername().equals(username)) {
+				System.out.println("Username: " + user.getUsername() + "Email" + user.getAdresaMail() + "Nr. Telefon" + user.getNumarTelefon() );
+				return;
+			}
+			System.out.println(String.format("Userul %s nu exista", username));
+			return;
+	}
+	}
 	public void add_friend(String currentUsername, String newFriendUsername) {
 		for (User user : Database.users) {
 			if (user.getUsername().equals(currentUsername)) {
