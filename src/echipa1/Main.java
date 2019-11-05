@@ -10,12 +10,12 @@ public class Main {
 	public static void main(String[] args){
 		//inregistrare useri
 		UserService userService = new UserService();
-		userService.register("Lori", "L0r1");
-		userService.register("Adi", "@d1");
-		userService.register("Andrei", "#31");
-		userService.register("Lori", "L0r1");
-		userService.register("Meli", "m3l1");
-		userService.register("Adi", "132");
+		userService.register("Lori", "L0r1", "Lori012@gmail.com", "0742177240");
+		userService.register("Adi", "@d1", "adi1@yahoo.com", "075244920");
+		userService.register("Andrei", "#31", "&rei@gmail.com", "074566123");
+		userService.register("Lori", "L0r1", "L0r114@gmail.com", "074555141");
+		userService.register("Meli", "m3l1", "meli09@yahoo.com", "074155623");
+		userService.register("Adi", "132", "Adi15@gmail.com", "075436789");
 
 		userService.add_friend("Adi", "Lori");
 		userService.add_friend("Adi", "Andrei");
